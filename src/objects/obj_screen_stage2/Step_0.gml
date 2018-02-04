@@ -13,6 +13,7 @@ if (current_speech == undefined) {
      current_speech = undefined;
 }
 
+/*
 if (input_check(INPUT_BUTTON_UP) || input_check(INPUT_BUTTON_DOWN)) {
     current_selection = (current_selection == 1) ? 2 : 1;
 } else if (input_check(INPUT_BUTTON_SELECT)) {
@@ -33,6 +34,7 @@ if (input_check(INPUT_BUTTON_UP) || input_check(INPUT_BUTTON_DOWN)) {
             break;
     }
 }
+*/
 
 if (global.console_time_hour >= 20) {
     global.console_time_hour   = 10;

@@ -1,4 +1,5 @@
-with(obj_core_input) {
-    select_pressed = true;
-    event_perform(ev_step, 0);
+with(obj_screen_start) {
+    button = "select";
+
+    event_user(0);
 }
