@@ -13,7 +13,18 @@ if keyboard_check_pressed(ord("O")) {
     }
 }
 
-up_pressed     = keyboard_check_pressed(vk_up);
-down_pressed   = keyboard_check_pressed(vk_down);
-select_pressed = keyboard_check_pressed(vk_space);
-reset_pressed  = keyboard_check_pressed(vk_escape);
+file_dropped   = undefined;
+up_pressed     = false;
+down_pressed   = false;
+select_pressed = false;
+reset_pressed  = false;
+
+if keyboard_check_pressed(vk_up) {
+    gmcallback_up();
+} else if keyboard_check_pressed(vk_down) {
+    gmcallback_down();
+} else if keyboard_check_pressed(ord("Z")) {
+    gmcallback_select();
+} else if keyboard_check_pressed(vk_escape) {
+    gmcallback_reset_button();
+}
