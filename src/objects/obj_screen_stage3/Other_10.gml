@@ -1,4 +1,44 @@
 if (in_dialog) {
+    if (button == "up" || button == "down") {
+        if (button == "up") {
+            dialog_id.selection = dialog_id.selection - 1;
+        } else {
+            dialog_id.selection = dialog_id.selection + 1;
+        }
+        
+        if (dialog_id.selection < 0) {
+            dialog_id.selection = array_length_1d(dialog_id.answers) - 1;
+        } else if (dialog_id.selection >= array_length_1d(dialog_id.answers)) {
+            dialog_id.selection = 0;
+        }
+    
+        if (global.console_audio_enabled) {
+            audio_play_sound(snd_cursor, 2, false);
+        }
+    } else if (button == "select") {
+        var _answer_count = array_length_1d(dialog_correct_answers);
+        
+        if (dialog_box < _answer_count) {
+            if (dialog_id.selection != dialog_correct_answers[dialog_box]) {
+                dialog_box = 0;
+                in_dialog  = false;
+                
+                with(dialog_id) instance_destroy();
+                exit;
+            } else {
+                if (dialog_box == _answer_count - 1) {
+                    craving_intelligence = true;
+                } else {
+                    dialog_box ++;
+
+                    dialog_id.selection = 0;
+                    dialog_id.question  = dialog_boxes[dialog_box * 2];
+                    dialog_id.answers = dialog_boxes[dialog_box * 2 + 1];
+                }
+            }
+        }
+    }
+
     exit;
 }
 
@@ -11,13 +51,12 @@ if (button == "up" || button == "down") {
 } else if (button == "select") {
     switch(current_selection) {
         case 1:
-            if (global.monster_sentience >= 0.9 && global.monster_hunger >= 0.9) {
+            if (global.monster_sentience >= 0.9 && global.monster_hunger >= 0.9 && !craving_intelligence) {
                 in_dialog = true;
-                var inst = instance_create_depth(0, 0, -15000, obj_effect_textbox);
+                dialog_id = instance_create_depth(0, 0, -15000, obj_effect_textbox);
                 
-                inst.question = dialog_boxes[0];
-                inst.answers = dialog_boxes[1];
-                
+                dialog_id.question = dialog_boxes[0];
+                dialog_id.answers = dialog_boxes[1];
             } else {
                 global.monster_happiness = min(1.0, global.monster_happiness + happiness_growth_rate);
             

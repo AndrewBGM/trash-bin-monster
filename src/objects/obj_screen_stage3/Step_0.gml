@@ -1,3 +1,8 @@
+if (dialog_id != noone) {
+    
+    exit;
+}
+
 if (instance_exists(obj_effect_transition) || instance_exists(obj_effect_textbox)) exit;
 
 global.monster_hunger    = max(0, global.monster_hunger - hunger_decay_rate);

@@ -11,7 +11,10 @@ global.monster_happiness  = 1.0;
 global.monster_sentience  = 0.0;
 
 in_dialog = false;
+dialog_id = noone;
 
+dialog_box = 0;
+dialog_correct_answers = [2, 1, 2, 2, 2, 1];
 dialog_boxes = [
     "What's your favorite color?",
     [
@@ -47,6 +50,8 @@ dialog_boxes = [
 
 current_selection = 1;
 times_fed         = 0;
+
+craving_intelligence = false;
 
 refused_food   = false;
 current_speech = undefined;
