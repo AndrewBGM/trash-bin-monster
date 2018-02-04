@@ -1,5 +1,7 @@
 if (completed) exit;
 
+if (button == "reset" || button == "filedrop") exit;
+
 if (current_overlay == -1) {
     current_overlay = 0;
     layer_set_visible(title_layer, false);

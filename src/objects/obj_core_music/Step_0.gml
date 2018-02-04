@@ -1,3 +1,5 @@
+if (!global.console_audio_enabled) exit;
+
 if (theme == 0) {
     var _intro_length = 17.615,
         _song_length  = 101.284,

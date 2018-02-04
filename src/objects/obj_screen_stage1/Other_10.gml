@@ -37,12 +37,12 @@ if (button == "up" || button == "down") {
         _size          = _data[? "size"],
         _created_today = _data[? "createdToday"];
 
-    show_debug_message(_name);
-    show_debug_message(_type);
-    show_debug_message(_size);
-    show_debug_message(_created_today);
-
     var _rejected = random(1) < 0.5;
+    
+    var _already_size = already_eaten[? _name];
+    if (_already_size != undefined) {
+        _rejected = true;
+    }
     
     if (_rejected) {
         refused_food = true;
@@ -62,6 +62,8 @@ if (button == "up" || button == "down") {
         if (!has_intelligence && wants_intelligence) {
             if (string_pos("intelligence.txt", _name) > 0) {
                 has_intelligence = true;
+            } else {
+                already_eaten[? _name] = _size;
             }
         }
         
