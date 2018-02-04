@@ -24,3 +24,5 @@ happiness_threshold = 0.5;
 
 hunger_growth_rate    = 1;
 happiness_growth_rate = 0.1;
+
+already_eaten = ds_map_create();

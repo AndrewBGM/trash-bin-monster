@@ -1,4 +1,4 @@
-if (!instance_exists(obj_effect_transition)) {
+if (!instance_exists(obj_effect_transition) && !instance_exists(obj_effect_textbox)) {
     global.console_time_minute ++;
     if (global.console_time_minute >= 60) {
         global.console_time_hour ++;

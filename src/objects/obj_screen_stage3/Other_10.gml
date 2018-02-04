@@ -1,3 +1,7 @@
+if (in_dialog) {
+    exit;
+}
+
 if (button == "up" || button == "down") {
     current_selection = (current_selection == 1) ? 2 : 1;
     
@@ -7,10 +11,19 @@ if (button == "up" || button == "down") {
 } else if (button == "select") {
     switch(current_selection) {
         case 1:
-            global.monster_happiness = min(1.0, global.monster_happiness + happiness_growth_rate);
+            if (global.monster_sentience >= 0.9 && global.monster_hunger >= 0.9) {
+                in_dialog = true;
+                var inst = instance_create_depth(0, 0, -15000, obj_effect_textbox);
+                
+                inst.question = dialog_boxes[0];
+                inst.answers = dialog_boxes[1];
+                
+            } else {
+                global.monster_happiness = min(1.0, global.monster_happiness + happiness_growth_rate);
             
-            if (global.console_audio_enabled) {
-                audio_play_sound(snd_happy, 2, false);
+                if (global.console_audio_enabled) {
+                    audio_play_sound(snd_happy, 2, false);
+                }
             }
             
             break;

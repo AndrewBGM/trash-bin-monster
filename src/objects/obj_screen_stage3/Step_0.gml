@@ -5,7 +5,7 @@ global.monster_happiness = max(0, global.monster_happiness - happiness_decay_rat
 
 if (current_speech == undefined) {
     if (global.monster_hunger <= hunger_threshold) {
-        current_speech = choose("png", "txt", "pdf");
+        current_speech = choose("beach.png", "document.txt", "cookies.pdf");
     } else if (global.monster_happiness <= happiness_threshold) {
         current_speech = ":(";
     }
@@ -18,10 +18,6 @@ if (global.console_time_hour >= 20) {
     global.console_time_minute = 0;
 
     var _target_room = undefined;
-    
-    if (global.monster_sentience >= 1.0) {
-        _target_room = rm_screen_stage3;
-    }
     
     room_goto_transition(_target_room);
 }

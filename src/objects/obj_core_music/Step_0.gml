@@ -8,6 +8,7 @@ if (audio_sound_get_track_position(music) > _song_length) {
     audio_sound_set_track_position(music, audio_sound_get_track_position(music) - _loop_length);
 }
 
+/*
 if (fadein_music != undefined) {
     fadein_amount += 0.05;
     
@@ -22,3 +23,4 @@ if (fadein_music != undefined) {
         fadein_music = undefined;
     }
 }
+*/
