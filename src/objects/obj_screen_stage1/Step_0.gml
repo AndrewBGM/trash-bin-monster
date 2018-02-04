@@ -20,6 +20,10 @@ if (global.console_time_hour >= 20) {
         _target_room = rm_screen_stage2;
     }
     
+    with(obj_core_music) {
+        fadein_music = audio_play_sound(snd_theme2, 0, 0);
+    }
+
     room_goto_transition(_target_room);
 }
 
