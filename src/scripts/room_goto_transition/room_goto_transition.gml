@@ -5,6 +5,6 @@
 var _room = argument[0];
 
 
-with(instance_create_layer(0, 0, layer, obj_effect_transition)) {
+with(instance_create_depth(0, 0, -15000, obj_effect_transition)) {
     target_room = _room;
 }

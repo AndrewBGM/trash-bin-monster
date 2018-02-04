@@ -1,4 +1,4 @@
-with(obj_core_input) {
-    up_pressed = true;
-    event_perform(ev_step, 0);
+with(obj_screen_parent) {
+    button = "up";
+    event_user(0);
 }

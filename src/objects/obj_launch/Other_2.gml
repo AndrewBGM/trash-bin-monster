@@ -11,6 +11,6 @@ global.monster_happiness  = 0;
 global.monster_discipline = 0;
 global.monster_sentience  = 0;
 
-instance_create_layer(0, 0, layer, obj_core_music);
+instance_create_depth(0, 0, -15000, obj_core_music);
 
 room_goto(rm_screen_start);

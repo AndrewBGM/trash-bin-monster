@@ -1,3 +1,5 @@
+event_inherited();
+
 global.console_time_hour   = 10;
 global.console_time_minute = 0;
 

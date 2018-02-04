@@ -1,4 +1,6 @@
-with(obj_core_input) {
-    file_dropped = argument0;
-    event_perform(ev_step, 0);
+with(obj_screen_parent) {
+    button   = "filedrop";
+    filedrop = argument[0];
+
+    event_user(0);
 }

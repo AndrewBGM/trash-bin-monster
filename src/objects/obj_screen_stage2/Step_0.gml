@@ -13,29 +13,6 @@ if (current_speech == undefined) {
      current_speech = undefined;
 }
 
-/*
-if (input_check(INPUT_BUTTON_UP) || input_check(INPUT_BUTTON_DOWN)) {
-    current_selection = (current_selection == 1) ? 2 : 1;
-} else if (input_check(INPUT_BUTTON_SELECT)) {
-    switch(current_selection) {
-        case 1:
-            global.monster_happiness = min(1.0, global.monster_happiness + happiness_growth_rate);
-            
-            break;
-
-        case 2:
-            global.monster_happiness = max(0.0, global.monster_discipline + happiness_growth_rate);
-            
-            if (refused_food) {
-                refused_food = false;
-                global.monster_discipline += 0.2;
-            }
-
-            break;
-    }
-}
-*/
-
 if (global.console_time_hour >= 20) {
     global.console_time_hour   = 10;
     global.console_time_minute = 0;

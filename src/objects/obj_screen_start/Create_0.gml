@@ -1,3 +1,5 @@
+event_inherited();
+
 completed       = false;
 current_overlay = -1;
 overlay_count   = 3;

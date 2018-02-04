@@ -1,4 +1,4 @@
-with(obj_core_input) {
-    reset_pressed = true;
-    event_perform(ev_step, 0);
+with(obj_screen_parent) {
+    button = "reset";
+    event_user(0);
 }
