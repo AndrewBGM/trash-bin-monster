@@ -13,12 +13,6 @@ if keyboard_check_pressed(ord("O")) {
     }
 }
 
-file_dropped   = undefined;
-up_pressed     = false;
-down_pressed   = false;
-select_pressed = false;
-reset_pressed  = false;
-
 if keyboard_check_pressed(vk_up) {
     gmcallback_up();
 } else if keyboard_check_pressed(vk_down) {
