@@ -16,7 +16,7 @@ if (button == "up" || button == "down") {
             break;
 
         case 2:
-            global.monster_happiness = max(0.0, global.monster_discipline + happiness_growth_rate);
+            global.monster_happiness = max(0.0, global.monster_happiness - happiness_growth_rate);
             
             if (global.console_audio_enabled) {
                 audio_play_sound(snd_hitem, 2, false);
