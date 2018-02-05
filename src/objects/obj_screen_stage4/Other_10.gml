@@ -43,7 +43,8 @@ if (in_dialog) {
                     instance_destroy(dialog_id);
                     dialog_id = noone;
                     
-                    room_goto_transition(rm_screen_stage_final);
+                    transitioning = true;
+                    alarm[1] = 4 * room_speed;
                 } else {
                     dialog_box ++;
 

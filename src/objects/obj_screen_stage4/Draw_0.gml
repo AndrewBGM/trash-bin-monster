@@ -47,3 +47,8 @@ for(var i = 0;i < 4;i ++) {
 
 // Draw monster
 draw_sprite(spr_monster, 3, room_width / 2, room_height / 2);
+
+// Draw drag overlay
+if (global.file_dragged) {
+    draw_sprite(spr_overlay_drop, 0, 2, 2);
+}

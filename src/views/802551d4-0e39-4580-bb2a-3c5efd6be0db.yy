@@ -10,7 +10,9 @@
         "f6e7e44e-d209-48f4-ad33-6c8960ee78e4",
         "a29ad940-2b76-4543-bfb5-69f6f118198c",
         "a641c637-a08c-4ca1-b6e5-774657c5cc43",
-        "a661f0e6-5c25-4731-9be1-d4d69da75dbb"
+        "a661f0e6-5c25-4731-9be1-d4d69da75dbb",
+        "53b1f12c-507e-4f42-b31e-0343a93a874b",
+        "72a94eda-2d5a-44b4-bf7c-b146d293ffb7"
     ],
     "filterType": "GMScript",
     "folderName": "gmcallback",

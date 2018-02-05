@@ -223,6 +223,14 @@
             }
         },
         {
+            "Key": "53b1f12c-507e-4f42-b31e-0343a93a874b",
+            "Value": {
+                "id": "24a17cb3-1340-4b55-ac4f-7180171a7c70",
+                "resourcePath": "scripts\\gmcallback_dragover\\gmcallback_dragover.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "543676c3-6b36-4c78-9705-ea74c11e0fe1",
             "Value": {
                 "id": "a5fde2f0-5b02-42b7-8630-7f94e5d225b3",
@@ -316,6 +324,14 @@
                 "id": "b25c490a-2d51-49d2-9aa9-db745ecba798",
                 "resourcePath": "objects\\obj_launch\\obj_launch.yy",
                 "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "72a94eda-2d5a-44b4-bf7c-b146d293ffb7",
+            "Value": {
+                "id": "e1f56233-3af7-4e78-99e5-b2e4c3c21fa8",
+                "resourcePath": "scripts\\gmcallback_dragleave\\gmcallback_dragleave.yy",
+                "resourceType": "GMScript"
             }
         },
         {
@@ -511,6 +527,14 @@
             }
         },
         {
+            "Key": "ac86222c-dfd7-4dbf-a90b-825b0c40bb85",
+            "Value": {
+                "id": "6afbf081-21a7-4434-afe8-bf71be6e4ec0",
+                "resourcePath": "sprites\\spr_overlay_drop\\spr_overlay_drop.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "ad10abf5-e724-4af8-9156-566e895c201d",
             "Value": {
                 "id": "b4399d90-bf85-409f-aff5-ba34709218e1",
@@ -687,6 +711,14 @@
             }
         },
         {
+            "Key": "e5cb4c7a-71ee-474b-bce9-9d7ef7d0fade",
+            "Value": {
+                "id": "c6d0a380-e03b-467d-a17e-2796778163a1",
+                "resourcePath": "fonts\\fnt_final\\fnt_final.yy",
+                "resourceType": "GMFont"
+            }
+        },
+        {
             "Key": "ed11d228-2ff5-4c58-b14b-4cef1f7cb736",
             "Value": {
                 "id": "5fd00dfa-5fe5-4914-a839-8b1c4512fd44",
@@ -767,6 +799,8 @@
         "a29ad940-2b76-4543-bfb5-69f6f118198c",
         "a641c637-a08c-4ca1-b6e5-774657c5cc43",
         "a661f0e6-5c25-4731-9be1-d4d69da75dbb",
+        "53b1f12c-507e-4f42-b31e-0343a93a874b",
+        "72a94eda-2d5a-44b4-bf7c-b146d293ffb7",
         "1faa484b-f7da-4d08-9bbb-22d59989439f",
         "31a2439c-0ceb-476b-bf54-a65d9c24635a"
     ],

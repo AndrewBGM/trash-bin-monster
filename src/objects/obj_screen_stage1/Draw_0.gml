@@ -68,3 +68,8 @@ if (!has_intelligence && wants_intelligence && !refused_food) {
     
     draw_sprite(spr_effect_monster_speech, refused_food ? 2 : current_speech, _x + 32, _y - 45);
 }
+
+// Draw drag overlay
+if (global.file_dragged) {
+    draw_sprite(spr_overlay_drop, 0, 2, 2);
+}

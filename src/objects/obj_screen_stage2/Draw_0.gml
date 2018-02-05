@@ -68,3 +68,8 @@ if (current_speech != undefined || refused_food) {
         draw_text(_x + 17 + _w / 2, _y - 47 + _h / 2, current_speech);
     }
 }
+
+// Draw drag overlay
+if (global.file_dragged) {
+    draw_sprite(spr_overlay_drop, 0, 2, 2);
+}

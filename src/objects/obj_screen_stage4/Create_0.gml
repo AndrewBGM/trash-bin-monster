@@ -17,6 +17,8 @@ refused_food = false;
 times_fed = 0;
 already_eaten = ds_map_create();
 
+transitioning = false;
+
 hunger_decay_rate    = 0.001;
 happiness_decay_rate = 0.002;
 

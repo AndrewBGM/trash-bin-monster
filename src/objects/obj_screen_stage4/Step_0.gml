@@ -1,3 +1,9 @@
+if (transitioning) {
+    global.monster_sentience = min(global.monster_sentience + 0.05, 1.0);
+
+    exit;
+}
+
 if (instance_exists(obj_effect_transition) || instance_exists(obj_effect_textbox)) exit;
 
 global.monster_hunger    = max(0, global.monster_hunger - hunger_decay_rate);
