@@ -14,8 +14,13 @@ in_dialog = false;
 dialog_id = noone;
 
 dialog_box = 0;
-dialog_correct_answers = [2, 1, 2, 2, 2, 1];
+dialog_correct_answers = [0, 2, 1, 2, 2, 2, 1];
 dialog_boxes = [
+    "I'd rather talk to you",
+    [
+        "Next"
+    ],
+
     "What's your favorite color?",
     [
         "Red", "Blue", "4 shades of green"

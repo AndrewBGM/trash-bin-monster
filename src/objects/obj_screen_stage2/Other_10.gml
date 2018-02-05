@@ -63,7 +63,7 @@ if (button == "up" || button == "down") {
         global.monster_sentience = min(1.0, global.monster_sentience + 0.2);
         
         switch(current_speech) {
-            case "image":
+            case "png":
                 if (string_pos("png", _name) == 0) {
                     _rejected = true;
                 }

@@ -50,7 +50,33 @@ var _x = room_width / 2,
 draw_sprite(spr_monster, 2, _x, _y);
 
 // Draw speech bubble
-if (craving_intelligence) {
+if (alarm[1] != -1) {
+    var _w = 100,
+        _h = 20;
+
+    draw_set_font(fnt_console);
+
+    draw_set_halign(fa_center);
+    draw_set_valign(fa_center);
+
+    draw_speech_bubble(_x + 16, _y - 46, _w, _h);
+    draw_set_color(CONSOLE_TEXT_COLOR);
+    
+    draw_text(_x + 17 + _w / 2, _y - 47 + _h / 2, "I'm going to sleep now");
+} else if (wants_to_be_smarter) {
+    var _w = 100,
+        _h = 20;
+
+    draw_set_font(fnt_console);
+
+    draw_set_halign(fa_center);
+    draw_set_valign(fa_center);
+
+    draw_speech_bubble(_x + 16, _y - 46, _w, _h);
+    draw_set_color(CONSOLE_TEXT_COLOR);
+    
+    draw_text(_x + 17 + _w / 2, _y - 47 + _h / 2, "...");
+} else if (craving_intelligence) {
     if (global.monster_happiness < 0.3) {
         var _w = 120,
             _h = 32;
