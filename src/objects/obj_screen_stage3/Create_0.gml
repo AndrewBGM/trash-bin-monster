@@ -51,6 +51,7 @@ dialog_boxes = [
 current_selection = 1;
 times_fed         = 0;
 
+wants_to_be_smarter  = false;
 craving_intelligence = false;
 
 refused_food   = false;

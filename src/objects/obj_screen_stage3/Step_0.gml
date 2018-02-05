@@ -8,6 +8,11 @@ if (instance_exists(obj_effect_transition) || instance_exists(obj_effect_textbox
 global.monster_hunger    = max(0, global.monster_hunger - hunger_decay_rate);
 global.monster_happiness = max(0, global.monster_happiness - happiness_decay_rate);
 
+if (global.monster_hunger <= 0.1 && global.monster_happiness <= 0.1 && alarm[1] == -1) {
+    current_speech = "I'm going to sleep now";
+    alarm[1] = 2 * room_speed;
+}
+
 if (current_speech == undefined) {
     if (global.monster_hunger <= hunger_threshold) {
         current_speech = choose("beach.png", "document.txt", "cookies.pdf");

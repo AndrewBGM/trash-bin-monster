@@ -35,8 +35,14 @@ for(var i = 0;i < 4;i ++) {
         _x   = (_seg / 2 + _seg * i) - sprite_get_xoffset(spr_overlay_meters),
         _y   = (room_height / 2 + 64) + _top - sprite_get_yoffset(spr_overlay_meters);
 
-    draw_sprite(spr_overlay_meters_base, i, (_seg / 2 + _seg * i), room_height / 2 + 64);
-    draw_sprite_part(spr_overlay_meters, i, 0, _top, 34, 32,_x, _y);
+    if (!hidden_meter[i]) {
+        if (current_selection == i) {
+            draw_sprite(spr_overlay_selector, 0, (_seg / 2 + _seg * i), room_height / 2 + 64);
+        }
+
+        draw_sprite(spr_overlay_meters_base, i, (_seg / 2 + _seg * i), room_height / 2 + 64);
+        draw_sprite_part(spr_overlay_meters, i, 0, _top, 34, 32,_x, _y);
+    }
 }
 
 // Draw monster

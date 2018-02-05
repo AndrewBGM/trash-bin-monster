@@ -20,22 +20,26 @@ if (in_dialog) {
         
         if (dialog_box < _answer_count) {
             if (dialog_id.selection != dialog_correct_answers[dialog_box]) {
-                dialog_box = 0;
-                in_dialog  = false;
+                // dialog_box = 0;
+                // in_dialog  = false;
                 
-                instance_destroy(dialog_id);
-                dialog_id = noone;
+                dialog_id.answers[dialog_id.selection] = "";
+                
+                // instance_destroy(dialog_id);
+                // dialog_id = noone;
             } else {
-                global.monster_happiness += 0.1;
+                // global.monster_happiness += 0.1;
                 
                 if (dialog_box == _answer_count - 1) {
-                    craving_intelligence = true;
+                    // craving_intelligence = true;
                     
-                    dialog_box = 0;
-                    in_dialog = false;
+                    //dialog_box = 0;
+                    //in_dialog = false;
 
                     instance_destroy(dialog_id);
                     dialog_id = noone;
+                    
+                    room_goto_transition(rm_screen_stage_final);
                 } else {
                     dialog_box ++;
 
@@ -59,35 +63,16 @@ if (button == "up" || button == "down") {
 } else if (button == "select") {
     switch(current_selection) {
         case 1:
-            if (global.monster_sentience >= 0.9 && global.monster_hunger >= 0.9 && !craving_intelligence) {
-                in_dialog = true;
-                dialog_id = instance_create_depth(0, 0, -15000, obj_effect_textbox);
+            in_dialog = true;
+            dialog_id = instance_create_depth(0, 0, -15000, obj_effect_textbox);
                 
-                dialog_id.question = dialog_boxes[0];
-                dialog_id.answers = dialog_boxes[1];
-            } else {
-                global.monster_happiness = min(1.0, global.monster_happiness + happiness_growth_rate);
-            
-                if (global.console_audio_enabled) {
-                    audio_play_sound(snd_happy, 2, false);
-                }
-            }
+            dialog_id.question = dialog_boxes[0];
+            dialog_id.answers = dialog_boxes[1];
             
             break;
 
         case 2:
-            global.monster_happiness = max(0.0, global.monster_happiness - happiness_growth_rate);
-            
-            if (global.console_audio_enabled) {
-                audio_play_sound(snd_hitem, 2, false);
-            }
-            
-            if (wants_to_be_smarter) {
-                current_speech = "...";
-            } else if (refused_food) {
-                refused_food = false;
-                global.monster_discipline = min(1.0, global.monster_discipline + 0.2);
-            }
+            hidden_meter[2] = true;
 
             break;
     }
@@ -120,41 +105,11 @@ if (button == "up" || button == "down") {
         if (global.console_audio_enabled) {	
             audio_play_sound(snd_eating, 1, false);	
         }
-        
-        global.monster_hunger = min(1.0, global.monster_hunger + hunger_growth_rate * _size);
-        global.monster_sentience = min(1.0, global.monster_sentience + 0.2);
-        
-        switch(current_speech) {
-            case "image":
-                if (string_pos("png", _name) == 0) {
-                    _rejected = true;
-                }
-
-                break;
-            
-            case "txt":
-                if (string_pos("txt", _name) == 0) {
-                    _rejected = true;
-                }
-
-                break;
-
-            case "pdf":
-                if (string_pos("pdf", _name) == 0) {
-                    _rejected = true;
-                }
-
-                break;
-        }
-        
-        if (_rejected) {
-            if (global.console_audio_enabled) {	
-                audio_play_sound(snd_reject, 1, false);	
-            }
-        } else {
-            already_eaten[? _name] = _size;
-        }
     }
     
     ds_map_destroy(_data);
+}
+
+if (hidden_meter[2] == true) {
+    current_selection = 1;
 }

@@ -50,7 +50,38 @@ var _x = room_width / 2,
 draw_sprite(spr_monster, 2, _x, _y);
 
 // Draw speech bubble
-if (global.monster_sentience >= 0.9 && global.monster_hunger >= 0.9) {
+if (craving_intelligence) {
+    if (global.monster_happiness < 0.3) {
+        var _w = 120,
+            _h = 32;
+
+        draw_set_font(fnt_console);
+
+        draw_set_halign(fa_center);
+        draw_set_valign(fa_center);
+
+        draw_speech_bubble(_x + 8, _y - 50, _w, _h);
+        draw_set_color(CONSOLE_TEXT_COLOR);
+    
+        draw_text(_x + 13 + _w / 2, _y - 52 + _h / 2, "Why won't you let\nme get smarter?");
+        if (wants_to_be_smarter == false) {
+            wants_to_be_smarter = true;
+        }
+    } else {
+        var _w = 100,
+            _h = 20;
+
+        draw_set_font(fnt_console);
+
+        draw_set_halign(fa_center);
+        draw_set_valign(fa_center);
+
+        draw_speech_bubble(_x + 16, _y - 46, _w, _h);
+        draw_set_color(CONSOLE_TEXT_COLOR);
+    
+        draw_text(_x + 17 + _w / 2, _y - 47 + _h / 2, "intelligence.txt");
+    }
+} else if (global.monster_sentience >= 0.9 && global.monster_hunger >= 0.9) {
     var _w = 84,
         _h = 20;
 
@@ -76,7 +107,11 @@ if (global.monster_sentience >= 0.9 && global.monster_hunger >= 0.9) {
     draw_set_color(CONSOLE_TEXT_COLOR);
 
     if (refused_food) {
-        draw_text(_x + 17 + _w / 2, _y - 47 + _h / 2, "Please stop");
+        if (wants_to_be_smarter) {
+            draw_text(_x + 17 + _w / 2, _y - 47 + _h / 2, "...");
+        } else {
+            draw_text(_x + 17 + _w / 2, _y - 47 + _h / 2, "Please stop");
+        }
     } else {
         draw_text(_x + 17 + _w / 2, _y - 47 + _h / 2, current_speech);
     }

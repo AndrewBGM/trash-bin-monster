@@ -50,7 +50,7 @@ var _x = room_width / 2,
 draw_sprite(spr_monster, 0, _x, _y);
 
 // Draw speech bubble
-if (!has_intelligence && wants_intelligence) {
+if (!has_intelligence && wants_intelligence && !refused_food) {
     var _w = 84,
         _h = 20;
 
