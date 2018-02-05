@@ -34,6 +34,12 @@ if (in_dialog) {
             } else {
                 // global.monster_happiness += 0.1;
                 
+                if (dialog_box == 1) {
+                    global.monster_name = "Bin";
+                } else if (dialog_box == 7) {
+                    hidden_meter[0] = true;
+                }
+                
                 if (dialog_box == _answer_count - 1) {
                     // craving_intelligence = true;
                     
@@ -44,7 +50,7 @@ if (in_dialog) {
                     dialog_id = noone;
                     
                     transitioning = true;
-                    alarm[1] = 4 * room_speed;
+                    alarm[1] = 2 * room_speed;
                 } else {
                     dialog_box ++;
 

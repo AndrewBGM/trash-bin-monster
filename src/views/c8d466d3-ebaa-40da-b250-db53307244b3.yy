@@ -8,7 +8,8 @@
         "461d520d-2c7f-44c0-827c-4759612cde2d",
         "10da86b8-06e0-4bfe-a6bf-af6db39790ea",
         "3725814d-235d-4713-ab53-0c5d4ee85999",
-        "396f1f0c-ac7b-4577-9495-03e5dcbad0d4"
+        "396f1f0c-ac7b-4577-9495-03e5dcbad0d4",
+        "b2f16164-040c-408d-9ee1-b92459004f5b"
     ],
     "filterType": "GMObject",
     "folderName": "stages",

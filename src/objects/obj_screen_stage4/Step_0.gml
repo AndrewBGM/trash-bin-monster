@@ -1,5 +1,5 @@
 if (transitioning) {
-    global.monster_sentience = min(global.monster_sentience + 0.05, 1.0);
+    global.monster_sentience = min(global.monster_sentience + 0.02, 1.0);
 
     exit;
 }

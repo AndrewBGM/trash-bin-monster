@@ -311,6 +311,14 @@
             }
         },
         {
+            "Key": "65dc9f00-cc03-4405-8c5a-2b3d63be7f93",
+            "Value": {
+                "id": "ea96f672-50c4-4b2a-aa0b-e3ba614f771b",
+                "resourcePath": "sprites\\spr_overlay_selector_final\\spr_overlay_selector_final.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "6a08f79c-5eda-4ac4-9163-c07ed4d39296",
             "Value": {
                 "id": "7fba0a58-53d3-4aa7-b6ff-11f95c11aded",
@@ -372,6 +380,14 @@
                 "id": "37da5abc-325a-4d4c-9522-3c3596bb0b58",
                 "resourcePath": "views\\7a1b7dad-b50e-4386-98e1-53eb9cb8e8bc.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "7bd31eeb-0226-4849-8f6a-f2d65482c9c6",
+            "Value": {
+                "id": "26fbd28e-3577-492d-8822-304eae7ce9ea",
+                "resourcePath": "rooms\\rm_screen_upload\\rm_screen_upload.yy",
+                "resourceType": "GMRoom"
             }
         },
         {
@@ -551,6 +567,14 @@
             }
         },
         {
+            "Key": "b2f16164-040c-408d-9ee1-b92459004f5b",
+            "Value": {
+                "id": "8636c919-7f51-45e9-91cb-5aa94385463d",
+                "resourcePath": "objects\\obj_screen_upload\\obj_screen_upload.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "b3342944-9436-4924-990f-b2a90e57d2df",
             "Value": {
                 "id": "2b3b576a-765f-470e-a806-b06b1024a4dc",
@@ -580,6 +604,14 @@
                 "id": "7e14a23c-1883-4389-88b9-04d4079600a9",
                 "resourcePath": "sounds\\snd_theme2\\snd_theme2.yy",
                 "resourceType": "GMSound"
+            }
+        },
+        {
+            "Key": "bb6b2618-1ef3-4d44-87d2-03ccdb2981e3",
+            "Value": {
+                "id": "bef10894-6799-493a-bb82-13ad4b4a277a",
+                "resourcePath": "sprites\\spr_loadingbar\\spr_loadingbar.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
@@ -668,6 +700,14 @@
                 "id": "05ac3b02-cef8-4591-b9f3-c4a750475cd4",
                 "resourcePath": "sprites\\spr_overlay_final_pipes\\spr_overlay_final_pipes.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "de0eb6c5-730a-470d-81e8-80504ce4ef81",
+            "Value": {
+                "id": "853095b4-b720-4c72-a8c8-89ee5837439b",
+                "resourcePath": "rooms\\rm_screen_end\\rm_screen_end.yy",
+                "resourceType": "GMRoom"
             }
         },
         {

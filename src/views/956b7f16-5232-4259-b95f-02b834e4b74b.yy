@@ -8,7 +8,9 @@
         "defe4353-9958-42db-94a5-78d0832128c5",
         "599a570a-c7d2-4cd5-acfe-d4dcc1224344",
         "543676c3-6b36-4c78-9705-ea74c11e0fe1",
-        "ae124f70-4f75-4699-830b-11275ac661a2"
+        "ae124f70-4f75-4699-830b-11275ac661a2",
+        "7bd31eeb-0226-4849-8f6a-f2d65482c9c6",
+        "de0eb6c5-730a-470d-81e8-80504ce4ef81"
     ],
     "filterType": "GMRoom",
     "folderName": "stages",

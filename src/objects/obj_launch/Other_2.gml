@@ -1,5 +1,6 @@
 #macro CONSOLE_TEXT_COLOR make_color_rgb(0, 68, 44)
 
+global.file_dragged = false;
 global.console_audio_enabled = true;
 global.console_tick_rate     = 1;
 global.console_time_hour     = 10;
