@@ -70,6 +70,16 @@ if (button == "up" || button == "down") {
                 dialog_id.question = dialog_boxes[0];
                 dialog_id.answers = dialog_boxes[1];
             } else {
+                repeat(8) {
+                    var _x = room_width / 2 + lengthdir_x(irandom(8), irandom(360)),
+                        _y = room_height / 2 + lengthdir_y(irandom(8), irandom(360));
+
+                    with(instance_create_depth(_x, _y, -1500, obj_effect_heart)) {
+                        speed = random(3);
+                        direction = 45 + irandom(90);
+                    }
+                }
+            
                 global.monster_happiness = min(1.0, global.monster_happiness + happiness_growth_rate);
             
                 if (global.console_audio_enabled) {

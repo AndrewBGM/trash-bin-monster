@@ -36,7 +36,7 @@ for(var i = 0;i < 3;i ++) {
         _y   = (room_height / 2 + 64) + _top - sprite_get_yoffset(spr_overlay_meters);
 
     if (current_selection == i) {
-        draw_sprite(spr_overlay_selector, 0, (_seg / 2 + _seg * i), room_height / 2 + 64);
+        draw_sprite(spr_overlay_selector, current_time / 100, (_seg / 2 + _seg * i), room_height / 2 + 64);
     }
 
     draw_sprite(spr_overlay_meters_base, i, (_seg / 2 + _seg * i), room_height / 2 + 64);
@@ -44,10 +44,11 @@ for(var i = 0;i < 3;i ++) {
 }
 
 // Draw monster
-var _x = room_width / 2,
-    _y = room_height / 2;
+var _x   = room_width / 2,
+    _y   = room_height / 2,
+    _img = (current_time / 100) % 4;
 
-draw_sprite(spr_monster, 0, _x, _y);
+draw_sprite(spr_monster, _img, _x, _y);
 
 // Draw speech bubble
 if (!has_intelligence && wants_intelligence && !refused_food) {

@@ -9,6 +9,16 @@ if (button == "up" || button == "down") {
         case 1:
             global.monster_happiness = min(1.0, global.monster_happiness + happiness_growth_rate);
             
+            repeat(8) {
+                var _x = room_width / 2 + lengthdir_x(irandom(8), irandom(360)),
+                    _y = room_height / 2 + lengthdir_y(irandom(8), irandom(360));
+
+                with(instance_create_depth(_x, _y, -1500, obj_effect_heart)) {
+                    speed = random(3);
+                    direction = 45 + irandom(90);
+                }
+            }
+            
             if (global.console_audio_enabled) {
                 audio_play_sound(snd_happy, 2, false);
             }

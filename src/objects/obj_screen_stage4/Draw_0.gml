@@ -37,7 +37,7 @@ for(var i = 0;i < 4;i ++) {
 
     if (!hidden_meter[i]) {
         if (current_selection == i) {
-            draw_sprite(spr_overlay_selector, 0, (_seg / 2 + _seg * i), room_height / 2 + 64);
+            draw_sprite(spr_overlay_selector, current_time / 100, (_seg / 2 + _seg * i), room_height / 2 + 64);
         }
 
         draw_sprite(spr_overlay_meters_base, i, (_seg / 2 + _seg * i), room_height / 2 + 64);
@@ -46,7 +46,11 @@ for(var i = 0;i < 4;i ++) {
 }
 
 // Draw monster
-draw_sprite(spr_monster, 3, room_width / 2, room_height / 2);
+var _x   = room_width / 2,
+    _y   = room_height / 2,
+    _img = 12 + (current_time / 100) % 4;
+
+draw_sprite(spr_monster, _img, _x, _y);
 
 // Draw drag overlay
 if (global.file_dragged) {

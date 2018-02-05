@@ -18,6 +18,6 @@ if (current_overlay == -1) {
         
     if (current_overlay >= overlay_count) {
         completed = true;
-        room_goto_transition(rm_screen_upload);
+        room_goto_transition(rm_screen_time);
     }
 }

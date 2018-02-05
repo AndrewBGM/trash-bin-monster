@@ -1,4 +1,8 @@
 if (button == "select") {
+    if (global.console_audio_enabled) {
+        audio_play_sound(snd_select, 2, false);
+    }
+        
     if (dialog_chosen_branch != undefined && dialog_branch_index >= 0) {
         var _length = array_length_1d(dialog_branches[dialog_chosen_branch]);
         
@@ -18,5 +22,9 @@ if (button == "select") {
         dialog_index ++;
     }
 } else {
+    if (global.console_audio_enabled) {
+        audio_play_sound(snd_cursor, 2, false);
+    }
+
     current_answer = !current_answer;
 }

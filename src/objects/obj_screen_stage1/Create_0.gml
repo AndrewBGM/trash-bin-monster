@@ -1,7 +1,7 @@
 event_inherited();
 
-global.console_time_hour   = 10;
-global.console_time_minute = 0;
+// global.console_time_hour   = 10;
+// global.console_time_minute = 0;
 
 alarm_set(0, global.console_tick_rate);
 
