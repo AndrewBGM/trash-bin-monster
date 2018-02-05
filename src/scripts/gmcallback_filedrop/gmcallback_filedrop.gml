@@ -4,3 +4,5 @@ with(obj_screen_parent) {
 
     event_user(0);
 }
+
+gmcallback_dragleave();

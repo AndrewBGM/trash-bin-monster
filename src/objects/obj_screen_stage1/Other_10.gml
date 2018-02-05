@@ -67,7 +67,7 @@ if (button == "up" || button == "down") {
             audio_play_sound(snd_eating, 1, false);	
         }
         
-        global.monster_hunger = min(1.0, global.monster_hunger + hunger_growth_rate * _size);
+        global.monster_hunger = min(1.0, global.monster_hunger + _size / 4096);
         
         if (!has_intelligence && wants_intelligence) {
             if (string_pos("intelligence.txt", _name) > 0) {
