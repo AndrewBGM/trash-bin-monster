@@ -24,7 +24,7 @@ if (button == "up" || button == "down") {
             
             if (refused_food) {
                 refused_food = false;
-                global.monster_discipline += 0.2;
+                global.monster_discipline = min(global.monster_discipline + 0.2, 1.0);
             }
 
             break;

@@ -16,6 +16,10 @@ if (in_dialog) {
             audio_play_sound(snd_cursor, 2, false);
         }
     } else if (button == "select") {
+        if (global.console_audio_enabled) {
+            audio_play_sound(snd_select, 2, false);
+        }
+
         var _answer_count = array_length_1d(dialog_correct_answers);
         
         if (dialog_box < _answer_count) {
@@ -26,7 +30,7 @@ if (in_dialog) {
                 instance_destroy(dialog_id);
                 dialog_id = noone;
             } else {
-                global.monster_happiness += 0.1;
+                global.monster_happiness = min(global.monster_happiness + 0.1, 1.0);
                 
                 if (dialog_box == _answer_count - 1) {
                     craving_intelligence = true;
@@ -92,6 +96,10 @@ if (button == "up" || button == "down") {
             break;
     }
 } else if (button == "filedrop") {
+    if (wants_to_be_smarter) {
+        exit;
+    }
+
     var _data = json_decode(filedrop);
     
     var _name          = _data[? "name"],

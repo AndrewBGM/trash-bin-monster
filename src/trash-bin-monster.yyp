@@ -319,6 +319,14 @@
             }
         },
         {
+            "Key": "74a336ce-3382-4ad6-9741-ce0b7df45e57",
+            "Value": {
+                "id": "3c70ea01-8316-42e5-b80f-c2e204e0e04e",
+                "resourcePath": "sounds\\snd_theme4\\snd_theme4.yy",
+                "resourceType": "GMSound"
+            }
+        },
+        {
             "Key": "75ac291e-7061-4bcb-8e8a-3b3545332d41",
             "Value": {
                 "id": "27aebec6-864f-4cc3-929c-e2c4fe0f8809",

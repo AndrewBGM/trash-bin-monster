@@ -18,6 +18,10 @@ if (in_dialog) {
     } else if (button == "select") {
         var _answer_count = array_length_1d(dialog_correct_answers);
         
+        if (global.console_audio_enabled) {
+            audio_play_sound(snd_select, 2, false);
+        }
+        
         if (dialog_box < _answer_count) {
             if (dialog_id.selection != dialog_correct_answers[dialog_box]) {
                 // dialog_box = 0;
