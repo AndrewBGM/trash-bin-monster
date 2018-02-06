@@ -11,36 +11,59 @@ if (room <= rm_screen_stage1 && !audio_is_playing(snd_theme1)) {
     var _pos = audio_sound_get_track_position(music);
 
     audio_stop_sound(music);
-    music = audio_play_sound(snd_theme1, 1, false);
+    music = audio_play_sound(snd_theme1, 0, false);
     audio_sound_set_track_position(music, _pos);
 } else if (room == rm_screen_stage2 && !audio_is_playing(snd_theme2)) {
     var _pos = audio_sound_get_track_position(music);
 
     audio_stop_sound(music);
-    music = audio_play_sound(snd_theme2, 1, false);
+    music = audio_play_sound(snd_theme2, 0, false);
     audio_sound_set_track_position(music, _pos);
-} else if (room == rm_screen_stage3 && !audio_is_playing(snd_theme3)) {
+} else if (room == rm_screen_stage3 && !audio_is_playing(snd_theme3)) {	
     var _pos = audio_sound_get_track_position(music);
 
     audio_stop_sound(music);
-    music = audio_play_sound(snd_theme3, 1, false);
+    music = audio_play_sound(snd_theme3, 0, false);
     audio_sound_set_track_position(music, _pos);
 } else if (room == rm_screen_stage4 && !audio_is_playing(snd_theme4)) {
+	/*
     var _pos = audio_sound_get_track_position(music);
 
     audio_stop_sound(music);
-    music = audio_play_sound(snd_theme4, 1, false);
+    music = audio_play_sound(snd_theme4, 0, false);
     audio_sound_set_track_position(music, _pos);
+	*/
+	
+	audio_sound_gain(music, 0, 800);
+	
+	if (audio_sound_get_gain(music) < 0.1) {
+		audio_stop_sound(music);
+		music = audio_play_sound(snd_theme4, 0, false);
+		audio_sound_gain(music, 0, 0);
+		audio_sound_gain(music, 1, 1000);
+	}
 } else if (room >= rm_screen_stage_final) {
-    intro_length = 3.077;
-    loop_length = 27.692 - intro_length;
+    _intro_length = 3.077;
+    _loop_length = 27.692 - _intro_length;
     
     if (room != rm_screen_death && !audio_is_playing(snd_theme5)) {
+		/*
         var _pos = audio_sound_get_track_position(music);
 
         audio_stop_sound(music);
-        music = audio_play_sound(snd_theme5, 1, false);
+        music = audio_play_sound(snd_theme5, 0, false);
         audio_sound_set_track_position(music, _pos);
+		*/
+		
+        
+		audio_sound_gain(music, 0, 500);
+	
+		if (audio_sound_get_gain(music) < 0.1) {
+			audio_stop_sound(music);
+			music = audio_play_sound(snd_theme5, 0, false);
+			audio_sound_gain(music, 0, 0);
+			audio_sound_gain(music, 1, 800);
+		}
     }
 }
 

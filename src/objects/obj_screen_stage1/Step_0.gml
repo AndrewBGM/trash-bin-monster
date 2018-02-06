@@ -27,3 +27,9 @@ if (global.monster_hunger <= 0 || global.monster_happiness <= 0) {
     audio_stop_all();
     room_goto_transition(rm_screen_death);
 }
+
+/*
+if keyboard_check_pressed(ord("O")) {
+    gmcallback_filedrop("{\"name\": \"iq.txt\", \"size\": 1024, \"type\": \"txt\", \"createdToday\": false}");
+}
+*/

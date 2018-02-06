@@ -36,3 +36,9 @@ if ((global.monster_hunger <= 0 || global.monster_happiness <= 0) && !has_talked
     audio_stop_all();
     room_goto_transition(rm_screen_death);
 }
+
+/*
+if keyboard_check_pressed(ord("O")) {
+    gmcallback_filedrop("{\"name\": \"blah." + string(current_speech) + "\", \"size\": " + string(irandom(1024)) + ", \"type\": \"" + string(current_speech) + "\", \"createdToday\": false}");
+}
+*/

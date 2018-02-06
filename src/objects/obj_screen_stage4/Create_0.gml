@@ -117,7 +117,7 @@ dialog_boxes = [
     
     "Do you understand?",
     [
-        "I think you're still upset from before",
+        "I think you're still upset",
         "Stop being so PETTY :D",
         "Why are you in a game then?"
     ],

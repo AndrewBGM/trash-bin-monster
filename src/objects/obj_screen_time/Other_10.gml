@@ -4,7 +4,7 @@ if (button == "select") {
     }
 
     current_hover++;
-    if (current_hover > 2) {
+    if (current_hover > 1) {
         global.console_time_hour = hour;
         global.console_time_minute = minute;
 

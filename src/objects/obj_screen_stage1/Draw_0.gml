@@ -63,7 +63,7 @@ if (!has_intelligence && wants_intelligence && !refused_food) {
     draw_set_valign(fa_center);
 
     draw_set_color(CONSOLE_TEXT_COLOR);
-    draw_text(_x + 17 + _w / 2, _y - 47 + _h / 2, "intelligence");
+    draw_text(_x + 17 + _w / 2, _y - 47 + _h / 2, "iq.txt");
 } else if (current_speech != undefined || refused_food) {
     draw_speech_bubble(_x + 32, _y - 46, 32, 28);
     

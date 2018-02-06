@@ -11,13 +11,13 @@ draw_set_valign(fa_center);
 
 if (dialog_chosen_branch == undefined) {
     draw_set_color(_red);
-    draw_text(room_width / 2 - 1, 32, dialog_tree[dialog_index]);
+    draw_text(room_width / 2 - 1 + shake_mod, 32, dialog_tree[dialog_index]);
 
     draw_set_color(_blue);
-    draw_text(room_width / 2 + 1, 32, dialog_tree[dialog_index]);
+    draw_text(room_width / 2 + 1 + shake_mod, 32, dialog_tree[dialog_index]);
 
     draw_set_color(c_white);
-    draw_text(room_width / 2, 32, dialog_tree[dialog_index]);
+    draw_text(room_width / 2 + shake_mod, 32, dialog_tree[dialog_index]);
 
     if (dialog_index == 10 || dialog_index == 23) {
         var _xoffset = 16;
@@ -51,12 +51,12 @@ if (dialog_chosen_branch == undefined) {
 
     if (dialog_branch_index < array_length_1d(_branch)) {
         draw_set_color(_red);
-        draw_text(room_width / 2 - 1, 32, _branch[dialog_branch_index]);
+        draw_text(room_width / 2 - 1 + shake_mod, 32, _branch[dialog_branch_index]);
 
         draw_set_color(_blue);
-        draw_text(room_width / 2 + 1, 32, _branch[dialog_branch_index]);
+        draw_text(room_width / 2 + 1 + shake_mod, 32, _branch[dialog_branch_index]);
 
         draw_set_color(c_white);
-        draw_text(room_width / 2, 32, _branch[dialog_branch_index]);
+        draw_text((room_width / 2) + shake_mod, 32, _branch[dialog_branch_index]);
     }
 }

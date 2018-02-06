@@ -29,6 +29,8 @@ _text += string(minute);
 
 draw_text(room_width / 2, room_height / 2, _text);
 
+draw_text(room_width / 2, (room_height / 2) - 24, "Pick your time");
+
 if (current_hover < 2) {
     draw_sprite(spr_time_arrows, 0, room_width / 2 + ((current_hover == 0) ? -10 : 10), room_height / 2);
 }

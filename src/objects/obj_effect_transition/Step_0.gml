@@ -1,3 +1,14 @@
+if (target_room == rm_screen_stage_final) {
+	audio_play_sound(whitenoise, 1, false);
+	if (room == target_room) {
+		instance_destroy();
+		exit;
+	} else if (alarm[0] == -1) {
+		alarm[0] = room_speed;	
+	}
+	exit;
+}
+
 switch(fade_state) {
     case 0:
         fade_alpha = min(fade_alpha + fade_speed, 1.0);

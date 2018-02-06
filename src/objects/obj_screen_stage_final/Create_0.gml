@@ -1,5 +1,7 @@
 event_inherited();
 
+alarm[0] = 15;
+shake_mod = 0;
 current_answer = 0;
 dialog_index   = 0;
 dialog_tree    = [
