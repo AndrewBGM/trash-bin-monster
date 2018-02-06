@@ -2,7 +2,7 @@
 
 global.file_dragged = false;
 global.console_audio_enabled = true;
-global.console_tick_rate     = 0.02 * room_speed;
+global.console_tick_rate     = 0.2 * room_speed;
 global.console_time_hour     = 10;
 global.console_time_minute   = 0;
 
