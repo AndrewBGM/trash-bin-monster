@@ -17,5 +17,5 @@ if (global.console_time_hour >= 20) {
     
     
     
-    room_goto_transition(_target_room);
+    room_goto_transition(_target_room, true);
 }

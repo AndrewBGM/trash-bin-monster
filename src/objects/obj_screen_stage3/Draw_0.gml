@@ -51,7 +51,7 @@ var _x   = room_width / 2,
 draw_sprite(spr_monster, _img, _x, _y);
 
 // Draw speech bubble
-if (alarm[1] != -1) {
+if (has_been_scolded) {
     var _w = 100,
         _h = 20;
 
@@ -63,7 +63,20 @@ if (alarm[1] != -1) {
     draw_speech_bubble(_x + 16, _y - 46, _w, _h);
     draw_set_color(CONSOLE_TEXT_COLOR);
     
-    draw_text(_x + 17 + _w / 2, _y - 47 + _h / 2, "I'm going to sleep now");
+    draw_text(_x + 17 + _w / 2, _y - 47 + _h / 2, "Let me grow!");
+} else if (alarm[1] != -1) {
+    var _w = 100,
+        _h = 20;
+
+    draw_set_font(fnt_console);
+
+    draw_set_halign(fa_center);
+    draw_set_valign(fa_center);
+
+    draw_speech_bubble(_x + 16, _y - 46, _w, _h);
+    draw_set_color(CONSOLE_TEXT_COLOR);
+    
+    draw_text(_x + 17 + _w / 2, _y - 47 + _h / 2, "Goodbye");
 } else if (wants_to_be_smarter) {
     var _w = 100,
         _h = 20;
@@ -78,7 +91,7 @@ if (alarm[1] != -1) {
     
     draw_text(_x + 17 + _w / 2, _y - 47 + _h / 2, "...");
 } else if (craving_intelligence) {
-    if (global.monster_happiness < 0.3) {
+    if (has_been_scolded) {
         var _w = 120,
             _h = 32;
 
@@ -90,7 +103,7 @@ if (alarm[1] != -1) {
         draw_speech_bubble(_x + 8, _y - 50, _w, _h);
         draw_set_color(CONSOLE_TEXT_COLOR);
     
-        draw_text(_x + 13 + _w / 2, _y - 52 + _h / 2, "Why won't you let\nme get smarter?");
+        draw_text(_x + 13 + _w / 2, _y - 52 + _h / 2, "Let me grow!");
         if (wants_to_be_smarter == false) {
             wants_to_be_smarter = true;
         }
@@ -106,7 +119,7 @@ if (alarm[1] != -1) {
         draw_speech_bubble(_x + 16, _y - 46, _w, _h);
         draw_set_color(CONSOLE_TEXT_COLOR);
     
-        draw_text(_x + 17 + _w / 2, _y - 47 + _h / 2, "intelligence.txt");
+        draw_text(_x + 17 + _w / 2, _y - 47 + _h / 2, "iq.txt");
     }
 } else if (global.monster_sentience >= 0.9 && global.monster_hunger >= 0.9) {
     var _w = 84,

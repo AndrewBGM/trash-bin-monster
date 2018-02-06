@@ -47,6 +47,14 @@
             }
         },
         {
+            "Key": "068155a0-8068-452b-a72b-880c2c33ad4c",
+            "Value": {
+                "id": "0c9d0411-48af-40f8-84bf-cf1e36b03026",
+                "resourcePath": "sprites\\spr_overlay_tombstone\\spr_overlay_tombstone.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "07f11065-d3f9-45db-8808-108d905afe41",
             "Value": {
                 "id": "ed854d41-87ab-4cfe-a4a5-490024d7c998",
@@ -76,6 +84,14 @@
                 "id": "7b5ccdf4-d238-428d-9d65-82ce3ef70f67",
                 "resourcePath": "fonts\\fnt_console\\fnt_console.yy",
                 "resourceType": "GMFont"
+            }
+        },
+        {
+            "Key": "1903b7f2-d65a-4d89-8963-2f3665624579",
+            "Value": {
+                "id": "1a18513b-b662-47ed-865b-47af29b0528e",
+                "resourcePath": "sprites\\spr_effect_bubbles\\spr_effect_bubbles.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
@@ -268,6 +284,14 @@
                 "id": "7183f5f0-e67b-4f2f-b914-72f769b5da31",
                 "resourcePath": "sounds\\snd_happy\\snd_happy.yy",
                 "resourceType": "GMSound"
+            }
+        },
+        {
+            "Key": "4bb2748e-9c71-4842-abed-b1def6a93f89",
+            "Value": {
+                "id": "5cc9f15f-d8ec-4b65-8021-e1f5c61bc15c",
+                "resourcePath": "objects\\obj_effect_bubble\\obj_effect_bubble.yy",
+                "resourceType": "GMObject"
             }
         },
         {
@@ -471,6 +495,14 @@
             }
         },
         {
+            "Key": "84663e3b-89fc-4e4a-a3f4-07d41508d708",
+            "Value": {
+                "id": "22f5a172-3883-419a-9d0c-8f4a52c03ffb",
+                "resourcePath": "objects\\obj_screen_death\\obj_screen_death.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "85ada2bb-f3eb-489d-87a3-858d337b5371",
             "Value": {
                 "id": "5801a62a-cb99-4359-8ed2-ae1258003098",
@@ -663,6 +695,22 @@
             }
         },
         {
+            "Key": "b843f66b-8076-4eb0-b07d-527c09298b87",
+            "Value": {
+                "id": "e82f17b5-6986-421b-a604-334a4e6f79f7",
+                "resourcePath": "sprites\\spr_console_background_death\\spr_console_background_death.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "b930b367-9229-4472-9069-7bccaf96156f",
+            "Value": {
+                "id": "b8b2391c-014c-4e52-91c2-43a9110036ab",
+                "resourcePath": "sounds\\snd_ded\\snd_ded.yy",
+                "resourceType": "GMSound"
+            }
+        },
+        {
             "Key": "bb6b2618-1ef3-4d44-87d2-03ccdb2981e3",
             "Value": {
                 "id": "bef10894-6799-493a-bb82-13ad4b4a277a",
@@ -692,6 +740,14 @@
                 "id": "8803e01a-c010-42a8-a3fc-a71f4b0be0dc",
                 "resourcePath": "objects\\obj_effect_transition\\obj_effect_transition.yy",
                 "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "c3621e52-52ef-407e-8d91-6c39679afee6",
+            "Value": {
+                "id": "d0221024-6737-40ff-9121-0f7b669dd6ad",
+                "resourcePath": "sounds\\snd_theme5\\snd_theme5.yy",
+                "resourceType": "GMSound"
             }
         },
         {
@@ -764,6 +820,14 @@
                 "id": "05ac3b02-cef8-4591-b9f3-c4a750475cd4",
                 "resourcePath": "sprites\\spr_overlay_final_pipes\\spr_overlay_final_pipes.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "dc33838f-144c-467b-8ba8-db9ebaf404ae",
+            "Value": {
+                "id": "25abd5bb-173a-4edd-bd80-77765e97352e",
+                "resourcePath": "rooms\\rm_screen_death\\rm_screen_death.yy",
+                "resourceType": "GMRoom"
             }
         },
         {

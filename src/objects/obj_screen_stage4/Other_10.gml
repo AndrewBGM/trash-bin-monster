@@ -34,9 +34,9 @@ if (in_dialog) {
             } else {
                 // global.monster_happiness += 0.1;
                 
-                if (dialog_box == 1) {
+                if (dialog_box == 2) {
                     global.monster_name = "Bin";
-                } else if (dialog_box == 7) {
+                } else if (dialog_box == 9) {
                     hidden_meter[0] = true;
                 }
                 
@@ -95,7 +95,7 @@ if (button == "up" || button == "down") {
         _size          = _data[? "size"],
         _created_today = _data[? "createdToday"];
 
-    var _rejected = random(1) < 0.5;
+    var _rejected = random(1) + global.monster_discipline / 2 < 0.5;
     
     var _already_size = already_eaten[? _name];
     if (_already_size == _size) {

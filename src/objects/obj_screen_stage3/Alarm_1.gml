@@ -1,1 +1,1 @@
-room_goto_transition(rm_screen_stage4);
+room_goto_transition(rm_screen_stage4, true);

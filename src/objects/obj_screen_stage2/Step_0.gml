@@ -23,7 +23,12 @@ if (global.console_time_hour >= 20) {
         _target_room = rm_screen_stage3;
     }
     
-    room_goto_transition(_target_room);
+    room_goto_transition(_target_room, true);
+}
+
+if (global.monster_hunger <= 0 || global.monster_happiness <= 0) {
+    audio_stop_all();
+    room_goto_transition(rm_screen_death);
 }
 
 // DEBUG

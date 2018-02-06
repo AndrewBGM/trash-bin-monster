@@ -10,6 +10,11 @@ global.monster_happiness  = 1.0;
 // global.monster_discipline = 0.0;
 global.monster_sentience  = 0.0;
 
+has_been_scolded = false;
+has_talked = false;
+asked_for_petting = false;
+has_been_pet      = false;
+
 in_dialog = false;
 dialog_id = noone;
 
@@ -26,7 +31,7 @@ dialog_boxes = [
         "Red", "Blue", "4 shades of green"
     ],
     
-    "Are you having fun playing with me?",
+    "Is it fun playing with me?",
     [
         "No", "Yes"
     ],
@@ -41,9 +46,9 @@ dialog_boxes = [
         "Dragon", "Dog", "Garbage",
     ],
     
-    "Why are you using <OS>?",
+    "Why are you using this OS?",
     [
-        "I'm a hipster", "I'm not a <other OS> pleb", "The Garbage bin is cuter here"
+        "I'm a hipster", "I'm not a pleb", "The Garbage bin is cuter"
     ],
     
     "I-is is cuter than me?",
@@ -62,8 +67,8 @@ craving_intelligence = false;
 refused_food   = false;
 current_speech = undefined;
 
-hunger_decay_rate    = 0.001;
-happiness_decay_rate = 0.002;
+hunger_decay_rate    = 0.0004;
+happiness_decay_rate = 0.0006;
 
 hunger_threshold    = 0.3;
 happiness_threshold = 0.5;

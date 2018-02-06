@@ -11,7 +11,8 @@
         "ac86222c-dfd7-4dbf-a90b-825b0c40bb85",
         "d39bfae3-070a-4a24-bbc7-43378cf86dae",
         "884880af-f9ff-4a72-bebe-ecdb09209d17",
-        "88d7c630-a7c6-4575-99c6-fb661a9c4629"
+        "88d7c630-a7c6-4575-99c6-fb661a9c4629",
+        "068155a0-8068-452b-a72b-880c2c33ad4c"
     ],
     "filterType": "GMSprite",
     "folderName": "overlays",

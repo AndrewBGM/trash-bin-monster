@@ -20,10 +20,15 @@ if (global.console_time_hour >= 20) {
         _target_room = rm_screen_stage2;
     }
 
-    room_goto_transition(_target_room);
+    room_goto_transition(_target_room, true);
+}
+
+if (global.monster_hunger <= 0 || global.monster_happiness <= 0) {
+    audio_stop_all();
+    room_goto_transition(rm_screen_death);
 }
 
 // DEBUG
 if keyboard_check_pressed(ord("O")) {
-    gmcallback_filedrop("{\"name\": \"intelligence.txt\", \"size\": 1024, \"type\": \"txt\", \"createdToday\": false}");
+    gmcallback_filedrop("{\"name\": \"iq.txt\", \"size\": 1024, \"type\": \"txt\", \"createdToday\": false}");
 }

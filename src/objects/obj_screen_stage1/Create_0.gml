@@ -19,8 +19,8 @@ has_intelligence   = false;
 refused_food   = false;
 current_speech = undefined;
 
-hunger_decay_rate    = 0.001;
-happiness_decay_rate = 0.002;
+hunger_decay_rate    = 0.0004;
+happiness_decay_rate = 0.0006;
 
 hunger_threshold    = 0.3;
 happiness_threshold = 0.5;

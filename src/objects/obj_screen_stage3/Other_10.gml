@@ -40,6 +40,8 @@ if (in_dialog) {
 
                     instance_destroy(dialog_id);
                     dialog_id = noone;
+                    
+                    has_talked = true;
                 } else {
                     dialog_box ++;
 
@@ -63,19 +65,26 @@ if (button == "up" || button == "down") {
 } else if (button == "select") {
     switch(current_selection) {
         case 1:
-            if (global.monster_sentience >= 0.9 && global.monster_hunger >= 0.9 && !craving_intelligence) {
+            if (has_talked) break;
+
+            if (has_been_pet && !has_talked) {
                 in_dialog = true;
                 dialog_id = instance_create_depth(0, 0, -15000, obj_effect_textbox);
                 
                 dialog_id.question = dialog_boxes[0];
                 dialog_id.answers = dialog_boxes[1];
+                exit;
+            }
+
+            if (global.monster_sentience >= 0.9 && global.monster_hunger >= 0.9 && !craving_intelligence) {
+                if (!has_been_pet) has_been_pet = true;
             } else {
-                repeat(8) {
+                repeat(6) {
                     var _x = room_width / 2 + lengthdir_x(irandom(8), irandom(360)),
                         _y = room_height / 2 + lengthdir_y(irandom(8), irandom(360));
 
                     with(instance_create_depth(_x, _y, -1500, obj_effect_heart)) {
-                        speed = random(3);
+                        speed = random(1);
                         direction = 45 + irandom(90);
                     }
                 }
@@ -96,7 +105,8 @@ if (button == "up" || button == "down") {
                 audio_play_sound(snd_hitem, 2, false);
             }
             
-            if (wants_to_be_smarter) {
+            if (wants_to_be_smarter || craving_intelligence) {
+                has_been_scolded = true;
                 current_speech = "...";
             } else if (refused_food) {
                 refused_food = false;
@@ -106,7 +116,7 @@ if (button == "up" || button == "down") {
             break;
     }
 } else if (button == "filedrop") {
-    if (wants_to_be_smarter) {
+    if (wants_to_be_smarter || has_been_scolded) {
         exit;
     }
 
@@ -117,7 +127,7 @@ if (button == "up" || button == "down") {
         _size          = _data[? "size"],
         _created_today = _data[? "createdToday"];
 
-    var _rejected = random(1) < 0.5;
+    var _rejected = random(1) + global.monster_discipline / 2 < 0.5;
     
     var _already_size = already_eaten[? _name];
     if (_already_size == _size) {
@@ -143,22 +153,22 @@ if (button == "up" || button == "down") {
         global.monster_sentience = min(1.0, global.monster_sentience + 0.2);
         
         switch(current_speech) {
-            case "image":
-                if (string_pos("png", _name) == 0) {
+            case "beach.png":
+                if (string_pos("beach.png", _name) == 0) {
                     _rejected = true;
                 }
 
                 break;
             
-            case "txt":
-                if (string_pos("txt", _name) == 0) {
+            case "doc.txt":
+                if (string_pos("doc.txt", _name) == 0) {
                     _rejected = true;
                 }
 
                 break;
 
-            case "pdf":
-                if (string_pos("pdf", _name) == 0) {
+            case "cookies.pdf":
+                if (string_pos("cookies.pdf", _name) == 0) {
                     _rejected = true;
                 }
 
